@@ -1,5 +1,5 @@
 import { Link } from "@heroui/link";
-
+import { Analytics } from "@vercel/analytics/next"
 import { Navbar } from "@/components/navbar";
 
 export default function DefaultLayout({
@@ -12,6 +12,7 @@ export default function DefaultLayout({
       <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
+        <Analytics />
       </main>
       <footer className="w-full flex items-center justify-center py-3">
         <Link
