@@ -1,5 +1,5 @@
 import { Link } from "@heroui/link";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "@/components/navbar";
 
 export default function DefaultLayout({
