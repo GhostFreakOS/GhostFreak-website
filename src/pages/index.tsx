@@ -1,7 +1,7 @@
 import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { button as buttonStyles } from "@heroui/theme";
-
+import {Avatar} from "@heroui/react";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
@@ -11,6 +11,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+        <Avatar className="w-48 h-48 text-tiny" src="https://github.com/GhostFreakOS.png" />
         <div className="inline-block max-w-lg text-center justify-center">
           <span className={title()}>Keep it&nbsp;</span>
           <span className={title({ color: "blue" })}>Simple&nbsp;</span>
