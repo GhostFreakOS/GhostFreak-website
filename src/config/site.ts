@@ -16,8 +16,28 @@ export const siteConfig = {
       label: "About",
       href: "/about",
     },
+    {
+      label: "Privecy",
+      href: "/privecy",
+    },
+    {
+      label: "Support",
+      href: "/support",
+    },
   ],
   navMenuItems: [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Privecy",
+      href: "/privecy",
+    },
+    {
+      label: "Support",
+      href: "/support",
+    },
     {
       label: "Docs",
       href: "/docs",
