@@ -11,10 +11,11 @@ import {
 } from "@heroui/navbar";
 import { link as linkStyles } from "@heroui/theme";
 import clsx from "clsx";
-
+import { IconBrandReddit } from '@tabler/icons-react';
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
+  DiscordIcon,
   GithubIcon,
   SearchIcon,
 } from "@/components/icons";
@@ -73,6 +74,12 @@ export const Navbar = ({ onThemeChange }: NavbarProps) => {
         <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
+          </Link>
+          <Link isExternal href={siteConfig.links.reddit} title="Discord">
+            <IconBrandReddit className="text-default-500" stroke={2} />
+          </Link>
+          <Link isExternal href={siteConfig.links.discord} title="Discord">
+            <DiscordIcon className="text-default-500" />
           </Link>
           <ThemeSwitch onThemeChange={onThemeChange} />
         </NavbarItem>
