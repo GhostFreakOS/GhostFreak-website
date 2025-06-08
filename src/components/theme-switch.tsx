@@ -9,11 +9,13 @@ import { SunFilledIcon, MoonFilledIcon } from "@/components/icons";
 export interface ThemeSwitchProps {
   className?: string;
   classNames?: SwitchProps["classNames"];
+  onThemeChange?: (theme: string) => void;
 }
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   className,
   classNames,
+  onThemeChange,
 }) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -28,7 +30,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     getWrapperProps,
   } = useSwitch({
     isSelected: theme === "light",
-    onChange: () => setTheme(theme === "light" ? "dark" : "light"),
+    onChange: () => {
+      const newTheme = theme === "light" ? "dark" : "light";
+      setTheme(newTheme);
+      onThemeChange?.(newTheme);
+    },
   });
 
   useEffect(() => {

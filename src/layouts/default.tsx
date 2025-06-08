@@ -2,14 +2,18 @@ import { Link } from "@heroui/link";
 import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "@/components/navbar";
 
+interface DefaultLayoutProps {
+  children: React.ReactNode;
+  onThemeChange?: (theme: string) => void;
+}
+
 export default function DefaultLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  onThemeChange,
+}: DefaultLayoutProps) {
   return (
     <div className="relative flex flex-col h-screen">
-      <Navbar />
+      <Navbar onThemeChange={onThemeChange} />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
         <Analytics />

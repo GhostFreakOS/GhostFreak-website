@@ -19,7 +19,11 @@ import {
   SearchIcon,
 } from "@/components/icons";
 
-export const Navbar = () => {
+interface NavbarProps {
+  onThemeChange?: (theme: string) => void;
+}
+
+export const Navbar = ({ onThemeChange }: NavbarProps) => {
   const searchInput = (
     <Input
       aria-label="Search"
@@ -70,7 +74,7 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github} title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
+          <ThemeSwitch onThemeChange={onThemeChange} />
         </NavbarItem>
       </NavbarContent>
 
@@ -78,7 +82,7 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
-        <ThemeSwitch />
+        <ThemeSwitch onThemeChange={onThemeChange} />
         <NavbarMenuToggle />
       </NavbarContent>
 
