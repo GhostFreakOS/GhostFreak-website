@@ -89,6 +89,12 @@ export const Navbar = ({ onThemeChange }: NavbarProps) => {
         <Link isExternal href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
+        <Link isExternal href={siteConfig.links.reddit} title="Discord">
+          <IconBrandReddit className="text-default-500" stroke={2} />
+        </Link>
+        <Link isExternal href={siteConfig.links.discord} title="Discord">
+          <DiscordIcon className="text-default-500" />
+        </Link>
         <ThemeSwitch onThemeChange={onThemeChange} />
         <NavbarMenuToggle />
       </NavbarContent>
